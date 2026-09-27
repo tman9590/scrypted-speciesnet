@@ -1,0 +1,12 @@
+kagglehub==1.0.2
+numpy==2.2.6
+onnx==1.19.1
+onnx2torch==1.5.15
+onnxruntime==1.23.0
+openvino==2025.3.0
+Pillow==12.3.0
+torch==2.8.0
+torchvision==0.23.0
+ncnn==1.0.20250916
+coremltools==9.0; platform_system == "Darwin"
+

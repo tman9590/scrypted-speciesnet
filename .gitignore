@@ -1,0 +1,9 @@
+.venv/
+.venv314-old/
+work/
+__pycache__/
+*.pyc
+*.pt
+*.ts
+*.pnnx.*
+

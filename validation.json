@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "labels": 2498,
+  "backends": {
+    "onnx": {
+      "max_logit_error": 2.6702880859375e-05,
+      "top1_agreement": true
+    },
+    "openvino": {
+      "max_logit_error": 0.011993646621704102,
+      "top1_agreement": true
+    },
+    "ncnn": {
+      "max_logit_error": 0.06975889205932617,
+      "top1_agreement": true
+    }
+  }
+}

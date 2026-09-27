@@ -1,0 +1,36 @@
+name: Build CoreML
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - speciesnet_adapter.py
+      - scripts/export_coreml.py
+      - scripts/validate_exports.py
+      - .github/workflows/build-coreml.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  coreml:
+    runs-on: macos-14
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          lfs: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements-build.txt
+      - run: python scripts/generate_configs.py
+      - run: python scripts/export_coreml.py
+      - run: python scripts/validate_exports.py --backends coreml --report models/coreml/validation.json
+      - name: Commit CoreML package
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add models/coreml config.json
+          git diff --cached --quiet || git commit -m 'Add validated CoreML SpeciesNet model'
+          git push
