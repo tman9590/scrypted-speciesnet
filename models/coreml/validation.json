@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "labels": 2498,
+  "backends": {
+    "coreml": {
+      "max_logit_error": 0.20096778869628906,
+      "top1_agreement": true
+    }
+  }
+}
