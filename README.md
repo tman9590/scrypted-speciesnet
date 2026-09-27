@@ -26,10 +26,10 @@ fixed-label camera-trap classification.
 
    | Backend | Model URL |
    | --- | --- |
-   | ONNX | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/onnx/config.json` |
-   | OpenVINO | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/openvino/config.json` |
-   | CoreML | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/coreml/config.json` |
-   | NCNN | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/ncnn/config.json` |
+   | ONNX | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/v1.0.0/models/onnx/config.json` |
+   | OpenVINO | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/v1.0.0/models/openvino/config.json` |
+   | CoreML | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/v1.0.0/models/coreml/config.json` |
+   | NCNN | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/v1.0.0/models/ncnn/config.json` |
 
 4. Select the new classifier in Scrypted NVR.
 
