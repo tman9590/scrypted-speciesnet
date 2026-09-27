@@ -22,11 +22,20 @@ fixed-label camera-trap classification.
 1. Install the appropriate Scrypted backend: ONNX (NVIDIA), OpenVINO
    (Intel/AMD), CoreML (Apple Silicon), or NCNN (Vulkan-capable systems).
 2. In that backend plugin, create a model device.
-3. Use `https://github.com/tman9590/scrypted-speciesnet` as the model URL.
+3. Use the direct config URL for the installed backend:
+
+   | Backend | Model URL |
+   | --- | --- |
+   | ONNX | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/onnx/config.json` |
+   | OpenVINO | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/openvino/config.json` |
+   | CoreML | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/coreml/config.json` |
+   | NCNN | `https://media.githubusercontent.com/media/tman9590/scrypted-speciesnet/main/models/ncnn/config.json` |
+
 4. Select the new classifier in Scrypted NVR.
 
-Scrypted maps the repository URL to `models/<backend>/config.json`. The root
-`config.json` is the canonical manifest; backend configs are generated
+The direct `media.githubusercontent.com` URLs are required because the model
+artifacts use Git LFS; GitHub's ordinary raw URLs return LFS pointer text. The
+root `config.json` is the canonical manifest, and backend configs are generated
 compatibility projections.
 
 ## Rebuild
@@ -57,4 +66,3 @@ CoreML export runs on macOS through GitHub Actions.
 Adapter code is Apache-2.0. SpeciesNet code and model are published by Google
 under Apache-2.0. See the upstream repository and model card for citations and
 limitations: https://github.com/google/cameratrapai
-
